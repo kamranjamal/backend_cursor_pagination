@@ -2,8 +2,12 @@
   "name": "my-apps",
   "version": "1.0.0",
   "main": "index.js",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "seed": "node utils/data.seed.js",
+    "seed:destroy": "node utils/data.seed.js -d"
   },
   "keywords": [],
   "author": "",
@@ -14,5 +18,8 @@
     "express": "^5.1.0",
     "express-validator": "^7.2.1",
     "mongoose": "^8.18.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
   }
 }
